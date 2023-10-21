@@ -4,7 +4,7 @@
 """
 
 string_value = 'Делааа...'
-int_value = 21
+int_value = 17
 
 print(string_value, int_value)
 
