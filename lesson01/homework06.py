@@ -17,4 +17,16 @@
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
 
+a = float(input("Введи расстояние первого дня: "))
+b = float(input("Введи целевое расстояние: "))
 
+if a < b:
+    day_count = 1
+    day_result = a
+    while day_result < b:
+        day_result = day_result * 1.1
+        day_count += 1
+        print(f"День = {day_count}; Расстояние = {day_result}")
+    print(f"Цель будет достигнута на {day_count}-й день")
+else:
+    print(f"Цель была достигнута")

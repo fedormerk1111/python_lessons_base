@@ -7,4 +7,15 @@
 сотрудника.
 """
 
+revenue = int(input("Укажи выручку, руб: "))
+costs = int(input("Укажи издержки, руб: "))
 
+if revenue > costs:
+    profit = revenue - costs
+    print(f"Ты в плюсе!!! Рентабельность составила {profit / revenue * 100} %")
+    employee_quantity = int(input("Укажи кол-во сотрудников: "))
+    print(f"Прибыль на человека = {profit / employee_quantity} руб.")
+elif revenue == costs:
+    print(f"Вышел в ноль")
+else:
+    print(f"Сплошные убытки!")
