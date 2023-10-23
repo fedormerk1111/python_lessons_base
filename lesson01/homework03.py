@@ -7,8 +7,8 @@
 user_num = input("Введи число: ")       # Решение через сложение строк и преобразование сложенных строк в числа
 
 num_1 = int(user_num)
-num_2 = int(user_num + user_num)
-num_3 = int(user_num + user_num + user_num)
+num_2 = int(user_num * 2)
+num_3 = int(user_num * 3)
 
 print(f"{num_1} + {num_2} + {num_3} = {num_1 + num_2 + num_3}")
 '''
