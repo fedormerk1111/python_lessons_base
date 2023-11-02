@@ -3,6 +3,7 @@
 Для решения используйте цикл while и арифметические операции.
 """
 
+'''
 user_num = list(input("Введи число: "))
 
 index = 1
@@ -14,3 +15,21 @@ while index < len(user_num):
     index += 1
 
 print(result)
+'''
+
+user_input = input("Введите число: ")
+
+if not  user_input.isdigit():
+    print("invalid_format")
+    exit()
+
+number = int(user_input)
+max_num = 0
+
+while number and max_num != 9:
+    print(number)
+    current = number % 10
+    number //= 10
+    max_num = current if current > max_num else max_num
+
+print(max_num)
