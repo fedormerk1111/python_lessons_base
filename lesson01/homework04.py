@@ -19,7 +19,7 @@ print(result)
 
 user_input = input("Введите число: ")
 
-if not  user_input.isdigit():
+if not user_input.isdigit():
     print("invalid_format")
     exit()
 
