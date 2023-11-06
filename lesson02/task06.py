@@ -23,3 +23,40 @@
 “ед”: [“шт.”]
 }
 """
+
+
+specification = {"название": str, "цена": str, "кол-во": str, "ед": str}
+temp_list = []
+result_list = []
+name_list =[]
+price_list =[]
+quantity_list =[]
+unit_list =[]
+
+try:
+    while True:
+        for item in specification:
+            specification[item] = input(f"{item}: ")
+        print(specification)    # для теста
+        temp_list.append(specification.copy())
+except KeyboardInterrupt:
+    for index, item in enumerate(temp_list):
+        user_tuple = (index + 1, item)
+        result_list.append(user_tuple)
+    print("")
+    print(result_list)    # для теста
+
+    for tuple_item in result_list:
+        temp_dict = tuple_item[1]
+        name_list.append(temp_dict.get("название"))
+        price_list.append(temp_dict.get("цена"))
+        quantity_list.append(temp_dict.get("кол-во"))
+        unit_list.append(temp_dict.get("ед"))
+
+    name_list = list(set(name_list))
+    price_list = list(set(price_list))
+    quantity_list = list(set(quantity_list))
+    unit_list = list(set(unit_list))
+
+    specification = {"название": name_list, "цена": price_list, "кол-во": quantity_list, "ед": unit_list}
+    print(specification)

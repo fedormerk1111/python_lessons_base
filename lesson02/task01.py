@@ -6,3 +6,7 @@
 """
 
 
+user_list = [10, 'String', 12.2, False, [1, 2, 3], (1, 2, 3), {"name": "John", "age": 32}]
+
+for item in user_list:
+    print(item, type(item))
