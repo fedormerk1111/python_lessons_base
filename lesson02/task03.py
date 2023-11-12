@@ -27,16 +27,9 @@ print(user_input)
 #         if item == user_input:
 #             print(key)
 
-# Решение через list:
 
-spring = [3, 4, 5]
-winter = [12, 1, 2]
-summer = [6, 7, 8]
-autumn = [9, 10, 11]
+year_dict = {"Зима": (12, 1, 2), "Весна": (3, 4, 5), "Лето": (6, 7, 8), "Осень": (9, 10, 11)}
 
-year = [spring, winter, summer, autumn]
-
-for item in year:
-    for int_month in item:
-        if int_month == user_input:
-            print(item)
+for key, value in year_dict.items():    # для распаковки в пару ключ-значение нужно испльзовать .items (иначе только ключи)
+    if user_input in value:
+        print(f"Время года - {key}")

@@ -27,5 +27,5 @@ while True:
             print(*my_list, sep=", ")
     else:
         print(f"Результат: ", end='')
-        print(*my_list, sep=", ")
+        print(*my_list, sep=", ")   # * = распаковка для отобоажения (без скобок и запятых)
         exit()
